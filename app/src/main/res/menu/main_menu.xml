@@ -12,6 +12,11 @@
             android:icon="@android:drawable/ic_menu_mapmode" />
 
 
+        <item
+            android:id="@+id/conf"
+            android:title="Configuracion"
+            android:icon="@android:drawable/ic_menu_mapmode" />
+
         />
     </group>
 
