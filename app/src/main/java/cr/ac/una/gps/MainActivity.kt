@@ -78,6 +78,7 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
 //            )
 //            insertEntity(entity)
 //        }
+
         val listView = findViewById<ListView>(R.id.listUbicaciones)
         var ubicaciones: List<Ubicacion>
 
@@ -103,7 +104,8 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
                 id = null,
                 latitud = latitud,
                 longitud = longitud,
-                fecha = Date()
+                fecha = Date(),
+//                isInside = 0
             )
             insertEntity(entity)
         }
