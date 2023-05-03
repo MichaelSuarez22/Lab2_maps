@@ -5,6 +5,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Color
 import android.location.Location
 import android.os.Bundle
 import android.os.Handler
@@ -53,7 +54,8 @@ class MapsFragment : Fragment(),OnMapReadyCallback {
                 googleMap ->
             map = googleMap
             getLocation()
-            scheduleUpdate()
+            createPolygon()
+//            scheduleUpdate()
         }
 
     }
@@ -83,8 +85,24 @@ class MapsFragment : Fragment(),OnMapReadyCallback {
         polygonOptions.add(LatLng( 9.9891975,-84.1282322))
         polygonOptions.add(LatLng( 10.1926805,-84.1515781))
         polygonOptions.add(LatLng( 10.1778124,-84.3994571))
-        return map.addPolygon(polygonOptions)
+        val polygon = map.addPolygon(polygonOptions)
+        val blueColor = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)
 
+        // Agregar marcadores a cada ubicación del polígono
+        for (latLng in polygonOptions.points) {
+            val markerOptions = MarkerOptions()
+                .position(latLng)
+                .title("Ubicación del polígono")
+            val blueColor = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)
+            markerOptions.icon(blueColor)
+            map.addMarker(markerOptions)
+
+
+        }
+
+
+
+        return polygon
 
     }
 

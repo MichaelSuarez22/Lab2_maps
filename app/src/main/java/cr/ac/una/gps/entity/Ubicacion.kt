@@ -11,5 +11,5 @@ data class Ubicacion(
     val latitud: Double,
     val longitud: Double,
     val fecha: Date,
-//    val isInside: Int
+//    val area: Boolean
 )

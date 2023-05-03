@@ -24,10 +24,12 @@ class UbicacionAdapter(context: Context, ubicaciones: List<Ubicacion>) :
         val fechaTextView = view!!.findViewById<TextView>(R.id.fecha)
         val latitudTextView = view.findViewById<TextView>(R.id.latitud)
         val longitudTextView = view.findViewById<TextView>(R.id.longitud)
+//        val areaTextView = view.findViewById<TextView>(R.id.area)
 
         fechaTextView.text = ubicacion!!.fecha.toString()
         latitudTextView.text = ubicacion.latitud.toString()
         longitudTextView.text = ubicacion.longitud.toString()
+//        areaTextView.text = ubicacion.area.toString()
 
         return view
     }

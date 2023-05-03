@@ -15,8 +15,11 @@
         <item
             android:id="@+id/conf"
             android:title="Configuracion"
-            android:icon="@android:drawable/ic_menu_mapmode" />
-
+            android:icon="@android:drawable/ic_menu_preferences" />
+        <item
+            android:id="@+id/tel"
+            android:title="Telefono"
+            android:icon="@android:drawable/ic_menu_call" />
         />
     </group>
 
