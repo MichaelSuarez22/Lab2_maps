@@ -14,3 +14,5 @@ interface UbicacionDao {
     @Query("SELECT * FROM ubicacion")
     fun getAll(): List<Ubicacion?>?
 }
+
+

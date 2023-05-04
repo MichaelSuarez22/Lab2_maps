@@ -1,5 +1,7 @@
 package cr.ac.una.gps.entity
 
+import androidx.annotation.Nullable
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.util.*
@@ -11,5 +13,7 @@ data class Ubicacion(
     val latitud: Double,
     val longitud: Double,
     val fecha: Date,
-//    val area: Boolean
+//    val area:Boolean
 )
+
+

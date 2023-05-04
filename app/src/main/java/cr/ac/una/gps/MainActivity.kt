@@ -111,7 +111,7 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
                 id = null,
                 latitud = latitud,
                 longitud = longitud,
-                fecha = Date()
+                fecha = Date(),
 //                area = true
 
 
@@ -186,7 +186,7 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
                 fragment = conf_fragment.newInstance("string1","string2")
             }
             R.id.tel -> {
-                fragment = conf_fragment.newInstance("string1","string2")
+                fragment = fragmento_telefono.newInstance("string1","string2")
             }
         }
         supportFragmentManager

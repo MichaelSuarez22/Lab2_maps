@@ -1,6 +1,8 @@
 package cr.ac.una.gps
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +13,9 @@ import android.widget.EditText
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
+private var telefono: String? = null
+
+
 
 /**
  * A simple [Fragment] subclass.
@@ -37,8 +42,17 @@ class fragmento_telefono : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_fragmento_telefono, container, false)
         val editTextTelefono = view.findViewById<EditText>(R.id.editTextTelefono)
-        // Resto del código del fragmento
+        editTextTelefono.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                telefono = s?.toString()
+            }
+            override fun afterTextChanged(s: Editable?) {}
+        })
         return view
+    }
+    fun obtenerTelefono(): String? {
+        return telefono
     }
  
     companion object {
