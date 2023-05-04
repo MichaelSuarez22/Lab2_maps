@@ -1,6 +1,7 @@
 package cr.ac.una.gps
 
 import android.annotation.SuppressLint
+import android.app.DatePickerDialog
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -93,8 +94,14 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
         }
 
 
+        }
 
-    }
+
+
+
+
+
+
 
     override fun onFragmentInteraction(latitud: Double, longitud: Double) {
 
